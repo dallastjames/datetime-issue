@@ -9,6 +9,25 @@
 <ion-content>
   <div class="ion-padding">
     The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <p>
+      If you get lost, the
+      <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/"
+        >docs</a
+      >
+      will be your guide.
+    </p>
+
+    <ion-item>
+      <ion-label>Start Time</ion-label>
+      <ion-datetime
+        minuteValues="0,15,30,45"
+        displayFormat="hh:mm a"
+        pickerFormat="hh:mm a"
+        [(ngModel)]="time"
+      ></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{time | date:'short'}}</ion-label>
+    </ion-item>
   </div>
 </ion-content>
